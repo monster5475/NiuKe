@@ -1,17 +1,11 @@
 package com.pratice1;
 
-import jdk.nashorn.internal.ir.Flags;
-
-import java.util.Stack;
-
 /**
  * @author: wyh
- *
- * @Date: 2019/9/3 13:04
+ * 合并两个排序的链表
+ * @Day: 2019/9/3
  */
-public class MyMain {
-
-
+public class Code16 {
     public static class ListNode {
         int val;
         ListNode next = null;
@@ -45,7 +39,7 @@ public class MyMain {
     }
 
     public static void main(String[] args) {
-        MyMain myMain = new MyMain();
+        Code16 myMain = new Code16();
         ListNode listNode1 = new ListNode(1);
         ListNode listNode3 = new ListNode(3);
         ListNode listNode5 = new ListNode(5);
