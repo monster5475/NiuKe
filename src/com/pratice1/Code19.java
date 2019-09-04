@@ -1,19 +1,13 @@
 package com.pratice1;
 
-import jdk.nashorn.internal.ir.Flags;
-
-import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Queue;
-import java.util.Stack;
 
 /**
  * @author: wyh
- *
- * @Date: 2019/9/3 13:04
+ * 顺时针打印矩阵
+ * @Day: 2019/9/4
  */
-public class MyMain {
-
+public class Code19 {
     public int[][] reverseArray(int[][] matrix){
         int width = matrix.length -1;
         if(width==0){
@@ -42,10 +36,4 @@ public class MyMain {
         return result;
     }
 
-    public static void main(String[] args) {
-        MyMain myMain = new MyMain();
-        int[][] matrix = {{1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15},{16,17,18,19,20}};
-        ArrayList<Integer> result = myMain.printMatrix(matrix);
-       result.stream().forEach(System.out::print);
-    }
 }
