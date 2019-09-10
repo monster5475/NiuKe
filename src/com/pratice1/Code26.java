@@ -1,19 +1,15 @@
 package com.pratice1;
 
-import sun.security.util.Length;
-
-import java.lang.reflect.Array;
-import java.util.stream.Collectors;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author: wyh
- *
- * @Date: 2019/9/3 13:04
+ * 字符串的排序
+ * @Day: 2019/9/9
  */
-
-
-public class MyMain {
+public class Code26 {
     Set<String> mySet = new HashSet<>();
     String myStr;
     public void getStr(int begin, int end){
@@ -50,11 +46,5 @@ public class MyMain {
         getStr(begin, end);
         result = new ArrayList<>(mySet);
         return result;
-    }
-
-    public static void main(String[] args) {
-        MyMain myMain = new MyMain();
-        ArrayList<String> result = myMain.Permutation("abcd");
-        result.stream().forEach(System.out::println);
     }
 }
