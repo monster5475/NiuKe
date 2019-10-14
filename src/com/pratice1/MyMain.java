@@ -16,47 +16,84 @@ import java.util.stream.Stream;
 
 public class MyMain {
 
-    public boolean isContinuous(int [] numbers) {
-        int[] cards = new int[5];
-        int count=0, count1=0;
-        boolean[] flags = new boolean[5];
-        int minNumber = Integer.MAX_VALUE;
-        for(int i=0;i<numbers.length;i++){
-            cards[i] = numbers[i];
-            if(numbers[i]!=0){
-                minNumber = numbers[i]<minNumber?numbers[i]:minNumber;
-            }else{
-                count+=1;
+    public int sumByOne(int num){
+        int sum=0;
+        while(num>0){
+            sum+=num%10;
+            num = num/10;
+        }
+        return sum;
+    }
+
+    public int movingCount(int threshold, int rows, int cols)
+    {
+        int[][] flag=new int[rows][cols];
+        int count =0;
+        for(int i=0; i<rows; i++){
+            int ii=sumByOne(i);
+            for(int j=0; j<cols; j++){
+                int jj=sumByOne(j);
+                if(ii+jj<=threshold){
+                    count +=1;
+                    flag[i][j] +=1;
+                }
             }
         }
-        for(int i=0;i<cards.length;i++){
-            if(cards[i]!=0){
-                cards[i]-=minNumber;
+        for(int i=0; i<cols; i++){
+            int ii=sumByOne(i);
+            for(int j=0; j<rows; j++){
+                int jj=sumByOne(j);
+                if(ii+jj<=threshold){
+                    count +=1;
+                    flag[j][i] +=1;
+                }
+                else{
+                    break;
+                }
             }
         }
-        for(int card: cards){
-            if(card<cards.length){
-                flags[card] = true;
+        for(int i=cols-1; i>=0; i--){
+            int ii=sumByOne(i);
+            for(int j=rows-1; j>=0; j--){
+                int jj=sumByOne(j);
+                if(ii+jj<=threshold){
+                    count +=1;
+                    flag[j][i] +=1;
+                }
+                else{
+                    break;
+                }
             }
         }
-        for(boolean flag1: flags){
-            if(flag1==false){
-                count1+=1;
+        for(int i=rows-1; i>=0; i--){
+            int ii=sumByOne(i);
+            for(int j=cols-1; j>=0; j--){
+                int jj=sumByOne(j);
+                if(ii+jj<=threshold){
+                    count +=1;
+                    flag[i][j] +=1;
+                }
+                else{
+                    break;
+                }
             }
         }
-        if(count == count1 || count1==0){
-            return true;
-        }else {
-            return false;
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                if(flag[i][j]==4){
+                    count -=3;
+                }else if(flag[i][j]==3){
+                    count -=2;
+                }else if(flag[i][j]==2){
+                    count -=1;
+                }
+            }
         }
+        return count;
     }
 
     public static void main(String[] args) {
-        MyMain myMain =new MyMain();
-        int[] array = {1,3,2,6,4};
-        int[] num1 = new int[1];
-        int[] num2 = new int[1];
-        boolean flag = myMain.isContinuous(array);
-        System.out.println(flag);
+        MyMain myMain = new MyMain();
+        System.out.println(myMain.movingCount(15,20,20));
     }
 }
