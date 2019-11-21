@@ -1,15 +1,15 @@
 package com.pratice1;
 
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Queue;
 
 /**
+ * 把二叉树打印多行
  * @author: wyh
- * 机器人的运动范围
- * @Date: 2019/9/3 13:04
+ * @Date: 2019/10/30 10:17
  */
-
-
-public class MyMain {
+public class Code55 {
     public static class TreeNode {
         int val = 0;
         TreeNode left = null;
@@ -33,7 +33,7 @@ public class MyMain {
 
     int currentLayer = 0;
 
-    ArrayList<ArrayList<Integer> > Print(TreeNode pRoot) {
+    ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
         Queue<MyNode> queue = new ArrayDeque<>();
         ArrayList<ArrayList<Integer>> result = new ArrayList<>();
         if(pRoot==null){
@@ -60,17 +60,5 @@ public class MyMain {
         }
         result.add(arrayList);
         return result;
-    }
-
-    public static void main(String[] args) {
-        int hashCode;
-        for(int i=0; i<10; i++){
-            hashCode = UUID.randomUUID().toString().hashCode();
-            if(hashCode < 0){
-                hashCode = -hashCode;
-            }
-
-            System.out.println(Long.valueOf(String.format("%7d", hashCode)));
-        }
     }
 }
