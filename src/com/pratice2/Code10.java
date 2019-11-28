@@ -4,11 +4,11 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * 俄罗斯方块
+ * 二分查找。。 scanner 里面不要在操作了
  * @author: wyh
  * @Date: 2019/10/30 10:50
  */
-public class Main {
+public class Code10 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
