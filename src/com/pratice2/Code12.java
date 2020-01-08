@@ -3,22 +3,36 @@ package com.pratice2;
 import java.util.Scanner;
 
 /**
- * 三个数求最大值
  * @author: wyh
- * @Date: 2019/10/30 10:50
+ * @Date: 2020/1/3 14:32
  */
 public class Code12 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int a = scanner.nextInt(), b = scanner.nextInt(), c = scanner.nextInt();
-        int max = a+b+c;
-        max = Math.max(max, a*b*c);
-        max = Math.max(max, a+b*c);
-        max = Math.max(max, a*b+c);
-        max = Math.max(max, (a+b)*c);
-        max = Math.max(max, a*(b+c));
-        max = Math.max(max, b*(a+c));
-        System.out.println(max);
+        int n;
+        n = scanner.nextInt();
+        long[] hb = new long[n];
+        for(int i=0;i<n;i++){
+            hb[i] = scanner.nextInt();
+        }
+        int begin = 0, end = n-1;
+        long sum = 0;
+        long hbEnd = hb[end], hbBegin = hb[begin];
+        while(end>begin){
+            if(hbEnd>hbBegin){
+                begin+=1;
+                hbBegin+=hb[begin];
+            }else if(hbEnd<hbBegin){
+                end-=1;
+                hbEnd+=hb[end];
+            }else{
+                sum = hbEnd;
+                end-=1;
+                hbEnd+=hb[end];
+            }
+        }
+        System.out.println(sum);
+        scanner.close();
     }
 }
