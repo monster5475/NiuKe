@@ -1,13 +1,13 @@
 package com.pratice2;
 
-import java.util.*;
+import java.util.Scanner;
 
 /**
- * https://www.nowcoder.com/ta/2019test
  * @author: wyh
- * @Date: 2020/3/6 21:36
+ * X游戏
+ * @Day: 2020/3/8
  */
-public class Main {
+public class Code35 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
