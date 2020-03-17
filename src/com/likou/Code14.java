@@ -2,10 +2,10 @@ package com.likou;
 
 /**
  * @author: wyh
- * @Day: 2020/3/11
+ * 最长公共前缀
+ * @Day: 2020/3/17
  */
-public class Solution {
-
+public class Code14 {
     public static String longestCommonPrefix(String[] strs) {
         if(strs.length==0){
             return "";
@@ -44,9 +44,5 @@ public class Solution {
             return "";
         }
         return strs[0].substring(0,index);
-    }
-
-    public static void main(String[] args) {
-        int[] array = {1,8,6,2,5,4,8,3,7};
     }
 }
