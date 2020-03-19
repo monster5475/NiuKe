@@ -1,14 +1,12 @@
-package com.mianshi;
-
+package com.mianshi.meituan;
 
 import java.util.Scanner;
 
 /**
  * @author: wyh
- * @Day: 2020/3/11
+ * @Day: 2020/3/19
  */
-public class Main {
-
+public class Code4 {
     public static void beginRun(boolean[] points, int point, int distance){
         int n = points.length;
         for(int i=0;i<n;i++){
