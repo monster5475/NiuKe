@@ -1,9 +1,4 @@
-package com.mianshi;
-
-
-import com.mianshi.test.thread.MyNumber;
-import com.mianshi.test.thread.MyNumberCount;
-import com.mianshi.test.thread.MyStringCount;
+package com.mianshi.test.thread;
 
 import java.util.Scanner;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -15,10 +10,9 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author: wyh
- * @Day: 2020/3/11
+ * @Day: 2020/3/28
  */
-public class Main {
-
+public class MyThreadMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         MyNumber myNumber = new MyNumber(1, "A");
