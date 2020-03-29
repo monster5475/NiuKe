@@ -1,5 +1,4 @@
-package com.mianshi;
-
+package com.mianshi.baidu;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,10 +6,9 @@ import java.util.Scanner;
 
 /**
  * @author: wyh
- * @Day: 2020/3/11
+ * @Day: 2020/3/29
  */
-public class Main {
-
+public class Code3 {
     public static int step;
     public static HashMap<Integer, ArrayList<Integer>> sides;
     public static int[] weight;

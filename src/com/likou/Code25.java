@@ -1,18 +1,16 @@
 package com.likou;
 
-import java.util.Scanner;
-
 /**
  * @author: wyh
- * @Day: 2020/3/11
+ * k个一组翻转链表
+ * @Day: 2020/3/28
  */
-public class Solution {
-
-      public static class ListNode {
-      int val;
-      ListNode next;
-      ListNode(int x) { val = x; }
-  }
+public class Code25 {
+    public static class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int x) { val = x; }
+    }
 
     public static ListNode reverseKGroup(ListNode head, int k) {
         int length = 0;
@@ -38,21 +36,5 @@ public class Solution {
             thead = middle;
         }
         return myhead.next;
-    }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        ListNode listNode1 = new ListNode(1);
-
-        ListNode listNode2 = new ListNode(2);
-        ListNode listNode3 = new ListNode(3);
-        ListNode listNode4 = new ListNode(4);
-        ListNode listNode5 = new ListNode(5);
-        listNode1.next = listNode2;
-        listNode2.next = listNode3;
-        listNode3.next = listNode4;
-        listNode4.next = listNode5;
-        ListNode head = reverseKGroup(listNode1, 3);
-        scanner.close();
     }
 }
