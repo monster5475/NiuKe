@@ -1,13 +1,11 @@
 package com.likou;
 
-import java.util.Scanner;
-
 /**
  * @author: wyh
- * @Day: 2020/3/11
+ * 下一个排序
+ * @Day: 2020/3/31
  */
-public class Solution {
-
+public class Code31 {
     public static int[] nextPermutation(int[] nums) {
         int length = nums.length;
         int count=0;
@@ -57,17 +55,5 @@ public class Solution {
             }
         }
         return nums;
-    }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String s= "barfoothefoobarman";
-        String[] ss = {"bar","foo"};
-        int[] nums = {1,3,2};
-        int[] nums1 = nextPermutation(nums);
-        for(int i=0;i<nums1.length;i++){
-            System.out.print(nums1[i]);
-        }
-        scanner.close();
     }
 }
