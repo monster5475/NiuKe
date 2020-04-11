@@ -1,7 +1,6 @@
 package com.mianshi;
 
-
-import java.util.*;
+import java.util.Scanner;
 
 /**
  * @author: wyh
@@ -9,10 +8,8 @@ import java.util.*;
  */
 public class Main {
 
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         scanner.close();
     }
 }

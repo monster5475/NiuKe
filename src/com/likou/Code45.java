@@ -1,13 +1,11 @@
 package com.likou;
 
-import java.util.Scanner;
-
 /**
  * @author: wyh
- * @Day: 2020/3/11
+ * 跳跃游戏II
+ * @Day: 2020/4/7
  */
-public class Solution {
-
+public class Code45 {
     public static int jump(int[] nums) {
         int length = nums.length;
         int[] dp = new int[length];
@@ -30,12 +28,5 @@ public class Solution {
             }
         }
         return dp[length-1];
-    }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int[] nums = {2,3,1,1,4};
-        jump(nums);
-        scanner.close();
     }
 }
