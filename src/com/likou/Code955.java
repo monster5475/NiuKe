@@ -3,11 +3,11 @@ package com.likou;
 import java.util.Arrays;
 
 /**
- * @author: wyh
- * @Day: 2020/3/11
+ * @Author wyh
+ * @Description 删列造序2 不要想删除什么，想保留什么
+ * @Date: 2020 07 31 下午9:24
  */
-public class Solution {
-
+public class Code955 {
     public static int minDeletionSize(String[] A) {
         int N = A.length;
         int W = A[0].length();

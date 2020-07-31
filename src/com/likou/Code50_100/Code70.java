@@ -1,4 +1,4 @@
-package com.likou;
+package com.likou.Code50_100;
 
 /**
  * @Author wyh

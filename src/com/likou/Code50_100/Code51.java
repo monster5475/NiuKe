@@ -1,11 +1,15 @@
-package com.likou;
+package com.likou.Code50_100;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author: wyh
+ * n皇后
  * @Day: 2020/4/16
  */
-public class Code52 {
-    public static int count;
+public class Code51 {
+    public static List<List<String>> result;
     public static int nn;
 
     public static boolean check(char[][] map, int i, int layer){
@@ -63,7 +67,15 @@ public class Code52 {
 
     public static void queens(char[][] map, int layer){
         if(layer==nn){
-            count+=1;
+            List<String> array = new ArrayList<>();
+            for(int i=0;i<nn;i++){
+                String res="";
+                for(int j=0;j<nn;j++){
+                    res+=map[i][j];
+                }
+                array.add(res);
+            }
+            result.add(array);
             return;
         }
         for(int i=0;i<nn;i++){
@@ -75,16 +87,16 @@ public class Code52 {
         }
     }
 
-    public static int totalNQueens(int n) {
+    public static List<List<String>> solveNQueens(int n) {
         char[][] map = new char[n][n];
-        count=0;
         nn = n;
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
                 map[i][j] = '.';
             }
         }
+        result = new ArrayList<>();
         queens(map, 0);
-        return count;
+        return result;
     }
 }
