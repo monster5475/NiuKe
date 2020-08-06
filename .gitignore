@@ -12,3 +12,5 @@ out
 *.sln
 *.sw?
 *.iml
+
+src/com/likou/Solution.java

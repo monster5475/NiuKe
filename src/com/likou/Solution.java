@@ -1,6 +1,8 @@
 package com.likou;
 
-import java.util.Arrays;
+import sun.security.util.Length;
+
+import java.util.*;
 
 /**
  * @author: wyh
@@ -8,46 +10,22 @@ import java.util.Arrays;
  */
 public class Solution {
 
-    public static int minDeletionSize(String[] A) {
-        int N = A.length;
-        int W = A[0].length();
-        int ans = 0;
 
-        // cur : all rows we have written
-        // For example, with A = ["abc","def","ghi"] we might have
-        // cur = ["ab", "de", "gh"].
-        String[] cur = new String[N];
-        for(int i=0; i<N ;i++){
-            cur[i] = "";
+    public int[] sumZero(int n) {
+        int[] nums = new int[n];
+        int sum=0;
+        for(int i=0;i<n-1;i++){
+            nums[i]=i;
+            sum+=i;
         }
-        for (int j = 0; j < W; ++j) {
-            // cur2 : What we potentially can write, including the
-            //        newest column col = [A[i][j] for i]
-            // Eg. if cur = ["ab","de","gh"] and col = ("c","f","i"),
-            // then cur2 = ["abc","def","ghi"].
-            String[] cur2 = Arrays.copyOf(cur, N);
-            for (int i = 0; i < N; ++i)
-                cur2[i] += A[i].charAt(j);
-
-            if (isSorted(cur2))
-                cur = cur2;
-            else
-                ans++;
-        }
-
-        return ans;
-    }
-
-    public static boolean isSorted(String[] A) {
-        for (int i = 0; i < A.length - 1; ++i)
-            if (A[i].compareTo(A[i+1]) > 0)
-                return false;
-
-        return true;
+        nums[n-1] = sum;
+        return nums;
     }
 
     public static void main(String[] args) {
-        String[] nums = {"zyx","wvu","tsr"};
-        minDeletionSize(nums);
+
+        int[] nums = {3,4,2,3};
+        checkPossibility(nums);
+
     }
 }
