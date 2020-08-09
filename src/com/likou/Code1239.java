@@ -1,21 +1,15 @@
 package com.likou;
 
-
-import com.sun.tools.javac.util.ArrayUtils;
-
-import javax.crypto.AEADBadTagException;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 /**
- * @author: wyh
- * @Day: 2020/3/11
+ * @Author wyh
+ * @Description 深搜+剪枝
+ * @Date: 2020 08 09 下午11:51
  */
-public class Solution {
-
-
+public class Code1239 {
     public static int cnt;
 
     public static List<String> array;
@@ -56,10 +50,5 @@ public class Solution {
         boolean[] flags = new boolean[length];
         dfs(flags, "",0);
         return cnt;
-    }
-
-    public static void main(String[] args) {
-        String[] strs = {"un","iq","ue"};
-        maxLength(Arrays.asList(strs));
     }
 }
