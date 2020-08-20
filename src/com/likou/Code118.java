@@ -1,15 +1,14 @@
 package com.likou;
 
-
-import java.util.*;
-import java.util.stream.IntStream;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * @author: wyh
- * @Day: 2020/3/11
+ * @Author wyh
+ * @Description 杨辉三角
+ * @Date: 2020 08 20 下午8:32
  */
-public class Solution {
-
+public class Code118 {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> arraylists = new ArrayList<>();
         for(int i=0;i<numRows;i++){
@@ -29,12 +28,5 @@ public class Solution {
             }
         }
         return arraylists;
-    }
-
-    public static void main(String[] args) {
-        int[] nums = {1,1,2};
-        nums = rearrangeBarcodes(nums);
-        IntStream.of(nums).forEach(System.out::println);
-
     }
 }
