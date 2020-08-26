@@ -1,14 +1,13 @@
 package com.likou;
 
-
 import java.util.HashMap;
 
 /**
- * @author: wyh
- * @Day: 2020/3/11
+ * @Author wyh
+ * @Description 前缀和
+ * @Date: 2020 08 26 下午4:26
  */
-public class Solution {
-
+public class Code525 {
     public int findMaxLength(int[] nums) {
         HashMap<Integer, Integer> hashMap = new HashMap<>();
         int count=0, maxLen = 0;
@@ -26,9 +25,5 @@ public class Solution {
             }
         }
         return maxLen;
-    }
-
-    public static void main(String[] args) {
-        int n=12;
     }
 }
