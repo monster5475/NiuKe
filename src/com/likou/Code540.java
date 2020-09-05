@@ -1,12 +1,11 @@
 package com.likou;
 
-
 /**
  * @author: wyh
- * @Day: 2020/3/11
+ * 二分法求解
+ * @Day: 2020/9/5
  */
-public class Solution {
-
+public class Code540 {
     public static int singleNonDuplicate(int[] nums) {
         int length = nums.length;
         int start =0, end = length-1;
@@ -32,9 +31,4 @@ public class Solution {
         return nums[start];
     }
 
-    public static void main(String[] args) {
-        int n=2;
-        int[] numbers={3,3,7,7,10,11,11};
-        singleNonDuplicate(numbers);
-    }
 }

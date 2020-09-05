@@ -1,4 +1,4 @@
-package com.mianshi;
+package com.base;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,10 +7,10 @@ import java.util.stream.IntStream;
 
 /**
  * @author: wyh
+ * 全排列去重问题
  * @Day: 2020/9/5
  */
-public class Main {
-
+public class AllRank {
     private static List<String> result1;
 
     private static List<String> result2;
