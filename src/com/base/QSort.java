@@ -1,13 +1,13 @@
-package com.mianshi;
+package com.base;
 
 import java.util.stream.IntStream;
 
 /**
  * @author: wyh
+ * 快速排序
  * @Day: 2020/9/5
  */
-public class Main {
-
+public class QSort {
     public static void myQsort(int[] numbers,int start,int end){
         if(start>=end){
             return;
