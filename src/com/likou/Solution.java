@@ -9,9 +9,8 @@ public class Solution {
 
 
 
-
     public static void main(String[] args) {
-        int[] arrays={-1,-1,-1,-1,2,2,-2,-2};
+        int[][] arrays = {{10,16},{2,8},{1,6},{7,12}};
         int k=3;
     }
 }
