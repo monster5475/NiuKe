@@ -1,21 +1,20 @@
 package com.likou;
 
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 /**
  * @author: wyh
+ *          2670
  * @Day: 2020/3/11
  */
 public class Solution {
-    public int shoppingOffers(List<Integer> price, List<List<Integer>> special, List<Integer> needs) {
-        return 0;
+
+    public boolean canWinNim(int n) {
+        boolean[] flags = new boolean[] { false, false, false };
+        return false;
     }
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-
+        boolean sum = solution.canWinNim(4);
+        System.out.println(sum);
     }
 }
